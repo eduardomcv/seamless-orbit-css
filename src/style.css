@@ -28,6 +28,21 @@ body {
   min-height: 100vh;
 }
 
+.orbit .center-image {
+  width: 12rem;
+  position: relative;
+}
+
+.orbit .center-image img {
+  width: 12rem;
+  position: absolute;
+  transition: opacity 500ms;
+}
+
+.orbit .center-image img:nth-child(2):hover {
+  opacity: 0;
+}
+
 .orbit ul {
   position: relative;
   list-style: none;
@@ -35,7 +50,6 @@ body {
 
 .orbit li {
   position: absolute;
-  opacity: 0;
   background: var(--color-orange);
   width: 8rem;
   aspect-ratio: 1/1;
@@ -68,22 +82,34 @@ body {
   opacity: 1;
 }
 
-.orbit li:first-child {
-  opacity: 1;
-  transform: translateX(300px);
+.orbit li:nth-child(1) {
+  transform: translate(15rem, 0rem);
 }
 
-.center-image {
-  width: 10rem;
-  position: relative;
+.orbit li:nth-child(2) {
+  transform: translate(12rem, 12rem);
 }
 
-.center-image img {
-  width: 10rem;
-  position: absolute;
-  transition: opacity 500ms;
+.orbit li:nth-child(3) {
+  transform: translate(0rem, 15rem);
 }
 
-.center-image img:nth-child(2):hover {
-  opacity: 0;
+.orbit li:nth-child(4) {
+  transform: translate(-12rem, 12rem);
+}
+
+.orbit li:nth-child(5) {
+  transform: translate(-15rem, 0rem);
+}
+
+.orbit li:nth-child(6) {
+  transform: translate(-12rem, -12rem);
+}
+
+.orbit li:nth-child(7) {
+  transform: translate(0rem, -15rem);
+}
+
+.orbit li:nth-child(8) {
+  transform: translate(12rem, -12rem);
 }
