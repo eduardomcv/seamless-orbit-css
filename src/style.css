@@ -30,6 +30,7 @@ body {
 
 .orbit {
   --img-size: 12rem;
+  --orbit-speed: 60s;
 }
 
 .orbit .center-image {
@@ -58,8 +59,7 @@ body {
   aspect-ratio: 1;
   padding: 0;
   margin: 0;
-  background: red;
-  animation: origin 60s linear infinite;
+  animation: orbit var(--orbit-speed) linear infinite;
 }
 
 .orbit li {
@@ -82,7 +82,7 @@ body {
 
 .orbit li > * {
   position: absolute;
-  animation: hold-position 60s linear infinite;
+  animation: orbit var(--orbit-speed) linear reverse infinite;
 }
 
 .orbit li > p {
@@ -109,7 +109,7 @@ body {
 .orbit li:nth-child(2) {
   --icon-bg: var(--color-green);
   --text-bg: var(--color-green-dark);
-  transform: translate(12rem, 12rem);
+  transform: translate(10rem, 10rem);
 }
 
 .orbit li:nth-child(3) {
@@ -121,7 +121,7 @@ body {
 .orbit li:nth-child(4) {
   --icon-bg: var(--color-red);
   --text-bg: var(--color-red-dark);
-  transform: translate(-12rem, 12rem);
+  transform: translate(-10rem, 10rem);
 }
 
 .orbit li:nth-child(5) {
@@ -133,7 +133,7 @@ body {
 .orbit li:nth-child(6) {
   --icon-bg: var(--color-yellow);
   --text-bg: var(--color-yellow-dark);
-  transform: translate(-12rem, -12rem);
+  transform: translate(-10rem, -10rem);
 }
 
 .orbit li:nth-child(7) {
@@ -145,17 +145,11 @@ body {
 .orbit li:nth-child(8) {
   --icon-bg: var(--color-orange);
   --text-bg: var(--color-orange-dark);
-  transform: translate(12rem, -12rem);
+  transform: translate(10rem, -10rem);
 }
 
-@keyframes origin {
+@keyframes orbit {
   100% {
     rotate: 1turn;
-  }
-}
-
-@keyframes hold-position {
-  100% {
-    rotate: -1turn;
   }
 }
