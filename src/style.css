@@ -49,15 +49,17 @@ body {
 
 .orbit ul {
   position: relative;
+  display: grid;
+  place-items: center;
   list-style: none;
   transform-origin: center;
-  animation: origin 60s linear infinite;
   width: var(--img-size);
   height: var(--img-size);
   aspect-ratio: 1;
   padding: 0;
   margin: 0;
   background: red;
+  animation: origin 60s linear infinite;
 }
 
 .orbit li {
@@ -74,13 +76,13 @@ body {
   color: var(--color-white);
   text-align: center;
   line-height: 1;
+  display: grid;
+  place-items: center;
 }
 
 .orbit li > * {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  animation: hold-position 60s linear infinite;
 }
 
 .orbit li > p {
@@ -149,5 +151,11 @@ body {
 @keyframes origin {
   100% {
     rotate: 1turn;
+  }
+}
+
+@keyframes hold-position {
+  100% {
+    rotate: -1turn;
   }
 }
