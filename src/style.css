@@ -29,7 +29,7 @@ body {
 }
 
 .orbit {
-  --img-size: 12rem;
+  --img-size: 11rem;
   --orbit-speed: 60s;
   --throb-delay: 100ms;
   --orbit-play-state: running;
@@ -75,7 +75,7 @@ body {
   --text-bg: blue;
 
   position: absolute;
-  width: 8rem;
+  width: 7.5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   font-weight: 500;
@@ -95,7 +95,7 @@ body {
   border-radius: inherit;
   animation: orbit var(--orbit-speed) linear reverse infinite
       var(--orbit-play-state),
-    throb 1s var(--throb-delay) ease-in-out infinite alternate
+    throb 800ms var(--throb-delay) ease-in-out infinite alternate
       var(--throb-play-state);
 }
 
@@ -122,7 +122,7 @@ body {
   --icon-bg: var(--color-blue);
   --text-bg: var(--color-blue-dark);
   --throb-delay: 0ms;
-  transform: translate(15rem, 0rem);
+  transform: translate(14rem, 0rem);
 }
 
 .orbit li:nth-child(2) {
@@ -136,7 +136,7 @@ body {
   --icon-bg: var(--color-pink);
   --text-bg: var(--color-pink-dark);
   --throb-delay: 1000ms;
-  transform: translate(0rem, 15rem);
+  transform: translate(0rem, 14rem);
 }
 
 .orbit li:nth-child(4) {
@@ -150,7 +150,7 @@ body {
   --icon-bg: var(--color-brown);
   --text-bg: var(--color-brown-dark);
   --throb-delay: 2000ms;
-  transform: translate(-15rem, 0rem);
+  transform: translate(-14rem, 0rem);
 }
 
 .orbit li:nth-child(6) {
@@ -164,7 +164,7 @@ body {
   --icon-bg: var(--color-purple);
   --text-bg: var(--color-purple-dark);
   --throb-delay: 3000ms;
-  transform: translate(0rem, -15rem);
+  transform: translate(0rem, -14rem);
 }
 
 .orbit li:nth-child(8) {
@@ -182,6 +182,6 @@ body {
 
 @keyframes throb {
   100% {
-    scale: 1.05;
+    scale: 1.1;
   }
 }
